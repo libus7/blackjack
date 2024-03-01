@@ -6,9 +6,11 @@ class Card extends Component {
     const { suit, value } = this.props;
     const card = `http://www.marytcusack.com/maryc/decks/Images/Cards/EyeOceanA/${suit}${value}.jpg`;
     return (
-      <div className="Card">
-        <img src={card} alt={`Card ${value} of ${suit}`}/>
-      </div>
+        <img 
+          className="Card" 
+          src={card} 
+          alt={`Card ${value} of ${suit}`}
+        />
     );
   }
 }

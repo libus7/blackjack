@@ -16,7 +16,7 @@ class Table extends Component {
     };
     this.randomValue = this.randomValue.bind(this);
     this.randomSuit = this.randomSuit.bind(this);
-    this.cardValue = this.cardValue.bind(this);
+    this.dealCard = this.dealCard.bind(this);
   }
 
   componentDidMount() {
@@ -26,31 +26,39 @@ class Table extends Component {
 
   randomValue() {
     const randomIndex = Math.floor(Math.random() * this.props.values.length);
-    this.setState({ value: this.props.values[randomIndex] });
+    return this.props.values[randomIndex];
   }
-
+  
   randomSuit() {
     const randomIndex = Math.floor(Math.random() * this.props.suits.length);
-    this.setState({ suit: this.props.suits[randomIndex] });
+    return this.props.suits[randomIndex];
   }
 
-  cardValue() {
-    return this.state.suit + this.state.value;
+  dealCard() {
+    this.setState({
+      value: this.randomValue(), 
+      suit: this.randomSuit()
+    });
   }
    
   render() {
     return (
-      <div className='Table'>
+      <div className="Table-layout">
         <h1>Blackjack</h1>
-        <div className='Table-full'>
-          {/* <div>
-              <img className='Table-img' src='http://www.marytcusack.com/maryc/decks/Images/Cards/EyeOceanSL/Extra05.jpg' />
-          </div> */}
-          <div className='Table-card'>  
-            <Card suit={this.state.suit} value={this.state.value} />
-          </div>
+        <div className="Table">
+        <img 
+          className="Table-img" 
+          src='http://www.marytcusack.com/maryc/decks/Images/Cards/EyeOceanSL/Extra05.jpg' 
+        /> 
+        <Card 
+          suit={this.state.suit} 
+          value={this.state.value} 
+        />  
         </div>
-        
+        <button 
+          className="Table-btn" 
+          onClick={this.dealCard}>Deal Card
+        </button>
       </div>
     );
   }
