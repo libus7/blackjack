@@ -6,13 +6,19 @@
   gap: 20px;
 }
 
+.Table-title {
+  padding-bottom: 15px;
+}
+
 .Table-layout {
   margin:auto;
-  height: 600px;
-  width: 900px;
+  height: 500px;
+  width: 1100px;
   margin-top: 100px;
-  padding-top: 20px;
-  background-color: lightgray;
+  padding-top: 50px;
+  border-radius: 10px;
+  color: white;
+  background-color: darkgreen;
 }
 
 .Table-img {
@@ -27,5 +33,5 @@
   border-radius: 5px;
   color: white;
   font-weight: bold;
-  background-color: darkblue;
+  background-color: black;
 }

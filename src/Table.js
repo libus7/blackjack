@@ -44,16 +44,16 @@ class Table extends Component {
   render() {
     return (
       <div className="Table-layout">
-        <h1>Blackjack</h1>
+        <h1 className="Table-title">Blackjack</h1>
         <div className="Table">
-        <img 
-          className="Table-img" 
-          src='http://www.marytcusack.com/maryc/decks/Images/Cards/EyeOceanSL/Extra05.jpg' 
-        /> 
-        <Card 
-          suit={this.state.suit} 
-          value={this.state.value} 
-        />  
+          <img 
+            className="Table-img" 
+            src='http://www.marytcusack.com/maryc/decks/Images/Cards/EyeOceanSL/Extra05.jpg' 
+          /> 
+          <Card 
+            suit={this.state.suit} 
+            value={this.state.value} 
+          />  
         </div>
         <button 
           className="Table-btn" 
