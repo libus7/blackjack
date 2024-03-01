@@ -1,0 +1,19 @@
+.Table {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.Table-full {
+  display: inline-flex;
+}
+
+.Table-card {
+  display: inline-flex;
+}
+
+.Table-img {
+  scale: 0.25;
+}
